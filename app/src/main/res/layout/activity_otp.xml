@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main"
+    tools:context=".OtpActivity">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/arrow"
+                android:id="@+id/arrow"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="36dp"
+                android:layout_marginStart="20dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/approveEmail"
+                android:text="E-poçt ünvanınızı təsdiq edin"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/arrow"
+                android:textStyle="bold"
+                android:textSize="29sp"
+                android:textColor="#1F1D1B"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtView"
+                android:text="lomarova@std.beu.edu.az e-poçt ünvanınıza göndərilən təsdiq kodunu daxil edərək hesabınızı təsdiqləyin."
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/approveEmail"
+                android:textSize="16dp"
+                android:layout_marginEnd="20sp"
+                android:textColor="#908F8F"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp" />
+
+            <com.chaos.view.PinView
+                android:id="@+id/pin"
+                style="@style/PinWidget.PinView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:cursorVisible="false"
+                android:inputType="number"
+                android:textColor="#1F1F1F"
+                android:textSize="24sp"
+                app:itemWidth="60dp"
+                app:itemHeight="60dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtView"
+                android:textStyle="italic"
+                app:hideLineWhenFilled="false"
+                app:itemCount="4"
+                app:itemRadius="3dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                app:itemSpacing="40dp"
+                android:layout_marginTop="36dp"
+                app:lineColor="#DEDFE1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/second"
+                android:text="00:25"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pin"
+                android:textSize="16dp"
+                android:layout_marginEnd="20sp"
+                android:textColor="#908F8F"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/newOTP"
+                android:text="Yenidən kod göndərin"
+                app:layout_constraintEnd_toEndOf="@id/pin"
+                app:layout_constraintTop_toTopOf="@id/second"
+                app:layout_constraintBottom_toBottomOf="@id/second"
+                android:textSize="16sp"
+                android:textAlignment="textEnd"
+                android:textColor="#7962FA"
+                app:layout_constraintStart_toEndOf="@id/second" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:id="@+id/loginButton"
+                app:layout_constraintTop_toBottomOf="@+id/second"
+                android:background="@drawable/button_login"
+                android:text="Təsdiq et"
+                android:layout_marginTop="100dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="100dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textAllCaps="false"
+                android:textColor="#FDFDFD"
+                android:textSize="20dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
